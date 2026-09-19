@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("products-container");
+  if (container) {
+    container.innerHTML = "<h3>JavaScript is working</h3>";
+  }
+});
 const SUPABASE_URL = "https://gzofquharmjvvxebbynf.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_nGeiGwevP7gP6FvvjHpOzg_sjdYRNDU";
 
