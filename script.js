@@ -1,4 +1,4 @@
-
+alert("SCRIPT.JS IS RUNNING");
 const SUPABASE_URL = "https://gzofquharmjvvxebbynf.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_nGeiGwevP7gP6FvvjHpOzg_sjdYRNDU";
 const supabase = window.supabase.createClient(
