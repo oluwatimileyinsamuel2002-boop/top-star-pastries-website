@@ -32,7 +32,7 @@ async function loadProducts() {
   const container = document.getElementById("products-container");
 
   if (!container) return;
-
+container.innerHTML = "<p>Loading products...</p>";
   const { data, error } = await supabase
     .from("products")
     .select("id, name, selling_price, description, image_url")
