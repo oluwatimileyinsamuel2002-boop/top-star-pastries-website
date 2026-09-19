@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Top Star Pastries — fresh bread and pastries." />
+  <title>Top Star Pastries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Top Star Pastries home">
+      <img src="assets/top-star-logo.png" alt="Top Star Pastries logo">
+    </a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-order" href="#order">Order Now</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">TOP STAR PASTRIES</span>
+        <h1>Freshly baked.<br><em>Made with care.</em></h1>
+        <p>Delicious bread and pastries made for everyday moments, family gatherings and special occasions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">Explore Products</a>
+          <a class="btn btn-light" href="#order">Place an Order</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="glow"></div>
+        <img src="assets/top-star-logo.png" alt="Top Star Pastries">
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>Fresh Daily</strong><span>Baked with care</span></div>
+      <div><strong>Bread & Pastries</strong><span>Made for every occasion</span></div>
+      <div><strong>Order With Ease</strong><span>Simple customer ordering</span></div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OUR PRODUCTS</span>
+          <h2>Something fresh for everyone</h2>
+        </div>
+        <p>Browse our bakery range. Product prices and photos can be updated from your admin system later.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><div class="product-icon">🍞</div><h3>Fresh Bread</h3><p>Soft, fresh and baked for your everyday meals.</p><span>View product</span></article>
+        <article class="product-card"><div class="product-icon">🥐</div><h3>Pastries</h3><p>Golden, delicious pastries for breakfast and snacks.</p><span>View product</span></article>
+        <article class="product-card"><div class="product-icon">🥯</div><h3>Special Bakes</h3><p>Special bakery selections for family and events.</p><span>View product</span></article>
+        <article class="product-card"><div class="product-icon">🎂</div><h3>Celebration Bakes</h3><p>Beautiful baked treats for memorable occasions.</p><span>View product</span></article>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="about-image">
+        <img src="assets/top-star-logo.png" alt="Top Star Pastries emblem">
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">ABOUT TOP STAR</span>
+        <h2>A bakery brand built around quality and freshness.</h2>
+        <p>Top Star Pastries brings bread and pastries together in a warm, welcoming bakery experience. This website is designed to showcase the brand and make ordering simple for customers.</p>
+        <div class="checks">
+          <span>✓ Fresh bakery products</span>
+          <span>✓ Quality-focused production</span>
+          <span>✓ Convenient ordering</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="section-heading centered">
+        <span class="eyebrow">GALLERY</span>
+        <h2>Made fresh. Served with pride.</h2>
+        <p>Replace these placeholders with real Top Star bread and pastry photos when ready.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card g1">Fresh Bread</div>
+        <div class="gallery-card g2">Golden Pastries</div>
+        <div class="gallery-card g3">Bakery Favourites</div>
+      </div>
+    </section>
+
+    <section id="order" class="order-section">
+      <div>
+        <span class="eyebrow">ORDER ONLINE</span>
+        <h2>Ready to order something fresh?</h2>
+        <p>Customers can contact Top Star Pastries to place an order. We can connect this section to WhatsApp and the POS later.</p>
+      </div>
+      <a class="btn btn-white" href="#contact">Start an Order</a>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div>
+        <span class="eyebrow">CONTACT</span>
+        <h2>Let's talk about your order.</h2>
+        <p>Phone number, WhatsApp number, address and opening hours can be added here.</p>
+      </div>
+      <div class="contact-card">
+        <div><strong>WhatsApp</strong><span>Add business number</span></div>
+        <div><strong>Phone</strong><span>Add business phone</span></div>
+        <div><strong>Location</strong><span>Add bakery address</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/top-star-logo.png" alt="Top Star Pastries logo">
+    <p>© <span id="year"></span> Top Star Pastries. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
