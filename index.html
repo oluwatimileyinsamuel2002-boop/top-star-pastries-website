@@ -259,7 +259,7 @@ async function showSupabaseProducts() {
 
   if (result.error) {
     console.error(result.error);
-    container.innerHTML = "<p>Unable to load products.</p>";
+    container.innerHTML = "<p>Supabase error: " + result.error.message + "</p>";
     return;
   }
 
