@@ -219,3 +219,43 @@ footer,
   font-weight: 800 !important;
   margin: 5px 0 12px !important;
 }
+/* FINAL MOBILE PRODUCT DESIGN */
+@media (max-width: 768px) {
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .product-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 15px !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    overflow: hidden !important;
+  }
+
+  .product-image {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+  }
+
+  .product-card h3 {
+    font-size: 22px !important;
+    margin: 14px 0 8px !important;
+  }
+
+  .product-card strong {
+    display: inline-block !important;
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .product-card p {
+    font-size: 15px !important;
+  }
+}
