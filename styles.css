@@ -330,5 +330,22 @@ footer,
     color: #3b2118 !important;
   }
 }
+@media (max-width: 768px) {
+  .contact > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
 
+  .contact > div:first-child h2,
+  .contact > div:first-child p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
   
