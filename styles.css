@@ -269,3 +269,10 @@ footer,
     scroll-margin-top: 70px !important;
   }
 }
+@media (max-width: 768px) {
+  .product-card {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 20px !important;
+  }
+}
