@@ -372,3 +372,17 @@ footer,
     overflow: visible !important;
   }
 }
+@media (max-width: 768px) {
+  .contact > div:first-child {
+    display: block !important;
+    background: none !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 0 25px 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
