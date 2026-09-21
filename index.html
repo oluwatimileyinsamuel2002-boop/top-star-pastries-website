@@ -492,6 +492,59 @@ function removeFromCart(index) {
   showCart();
   showCart();
 }
+function showCheckoutForm() {
+  const formBox = document.createElement("div");
+
+  formBox.id = "checkout-box";
+  formBox.style.position = "fixed";
+  formBox.style.top = "5%";
+  formBox.style.left = "5%";
+  formBox.style.width = "90%";
+  formBox.style.maxHeight = "90vh";
+  formBox.style.overflowY = "auto";
+  formBox.style.background = "white";
+  formBox.style.padding = "22px";
+  formBox.style.borderRadius = "24px";
+  formBox.style.boxShadow = "0 10px 40px rgba(0,0,0,0.3)";
+  formBox.style.zIndex = "20000";
+  formBox.style.boxSizing = "border-box";
+
+  formBox.innerHTML = `
+    <h2>🧾 Checkout</h2>
+
+    <label>Customer Name</label>
+    <input id="customer-name" type="text"
+      placeholder="Enter your name"
+      style="width:100%;padding:14px;margin:8px 0 15px;border:1px solid #ddd;border-radius:12px;box-sizing:border-box;">
+
+    <label>Phone Number</label>
+    <input id="customer-phone" type="tel"
+      placeholder="Enter your phone number"
+      style="width:100%;padding:14px;margin:8px 0 15px;border:1px solid #ddd;border-radius:12px;box-sizing:border-box;">
+
+    <label>Delivery / Pickup Location</label>
+    <input id="customer-location" type="text"
+      placeholder="Enter your location"
+      style="width:100%;padding:14px;margin:8px 0 15px;border:1px solid #ddd;border-radius:12px;box-sizing:border-box;">
+
+    <label>Order Note (Optional)</label>
+    <textarea id="customer-note"
+      placeholder="Any special instruction?"
+      style="width:100%;padding:14px;margin:8px 0 20px;border:1px solid #ddd;border-radius:12px;box-sizing:border-box;min-height:90px;"></textarea>
+
+    <button onclick="submitCheckout()"
+      style="width:100%;padding:15px;background:#25D366;color:white;border:0;border-radius:25px;font-weight:bold;font-size:16px;">
+      Continue to WhatsApp
+    </button>
+
+    <button onclick="document.getElementById('checkout-box').remove()"
+      style="width:100%;padding:13px;margin-top:10px;border:0;border-radius:25px;">
+      Cancel
+    </button>
+  `;
+
+  document.body.appendChild(formBox);
+}
 
 function orderCartOnWhatsApp() {
   if (cart.length === 0) return;
