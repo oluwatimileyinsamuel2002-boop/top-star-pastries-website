@@ -287,7 +287,20 @@ async function showSupabaseProducts() {
       image.alt = product.name;
       card.appendChild(image);
     }
+const name = document.createElement("h3");
+name.textContent = product.name;
+card.appendChild(name);
 
+const price = document.createElement("strong");
+price.textContent = Number(product.selling_price || 0).toLocaleString(
+  "en-NG",
+  {
+    style: "currency",
+    currency: "NGN",
+    maximumFractionDigits: 0
+  }
+);
+card.appendChild(price);
   
 
     const description = document.createElement("p");
