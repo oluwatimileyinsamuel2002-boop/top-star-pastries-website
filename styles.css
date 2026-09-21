@@ -348,4 +348,27 @@ footer,
     margin-right: 0 !important;
   }
 }
-  
+  /* CONTACT SECTION FIX */
+@media (max-width: 768px) {
+  .contact {
+    background: transparent !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact > div:first-child {
+    background: transparent !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .contact h2,
+  .contact p {
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+}
