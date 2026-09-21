@@ -426,3 +426,32 @@ footer,
     box-sizing: border-box !important;
   }
 }
+/* SEPARATE CONTACT SECTION */
+@media (max-width: 768px) {
+  .contact {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 50px 24px !important;
+    background: #fffaf5 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  .contact > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 30px 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
