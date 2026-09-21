@@ -602,3 +602,22 @@ footer,
     text-decoration: none !important;
   }
 }
+@media (max-width: 768px) {
+  .order-section > a {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 150px !important;
+    height: auto !important;
+    background: #ffffff !important;
+    color: #7b3214 !important;
+    padding: 14px 24px !important;
+    margin: 15px 24px 0 !important;
+    border-radius: 30px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
