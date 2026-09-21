@@ -538,6 +538,14 @@ footer,
 }
 @media (max-width: 768px) {
   .order-section {
-    background: transparent !important;
+    background: #7b3214 !important;
+    margin-bottom: 60px !important;
+    padding-bottom: 50px !important;
+    border-radius: 0 0 30px 30px !important;
+  }
+
+  .contact {
+    background: #fffaf5 !important;
+    margin-top: 0 !important;
   }
 }
