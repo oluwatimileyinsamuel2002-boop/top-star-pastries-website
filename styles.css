@@ -658,3 +658,29 @@ footer,
     white-space: nowrap !important;
   }
 }
+/* WHATSAPP ORDER BUTTON */
+.btn-whatsapp {
+  display: inline-block !important;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  padding: 14px 22px !important;
+  margin-top: 18px !important;
+  border-radius: 30px !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  border: none !important;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .btn-whatsapp {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
