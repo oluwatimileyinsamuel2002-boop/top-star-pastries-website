@@ -330,54 +330,5 @@ footer,
     color: #3b2118 !important;
   }
 }
-/* FINAL CONTACT AND ORDER MOBILE FIX */
 
-@media (max-width: 768px) {
-
-  .order-section > div,
-  .contact > div,
-  .contact-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .contact-card > div {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-wrap: anywhere !important;
-  }
-
-  .contact-card span {
-    display: inline !important;
-    white-space: normal !important;
-  }
-
-  .btn-white {
-    display: inline-flex !important;
-    width: auto !important;
-    min-width: 160px !important;
-    height: auto !important;
-    padding: 14px 24px !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #6b2b12 !important;
-    background: #fff !important;
-    font-size: 16px !important;
-    line-height: 1.2 !important;
-    text-decoration: none !important;
-  }
-
-  .order-section {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    box-sizing: border-box !important;
-  }
-
-  .contact {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    box-sizing: border-box !important;
-  }
-}
+  
