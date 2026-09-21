@@ -259,3 +259,13 @@ footer,
     font-size: 15px !important;
   }
 }
+/* MOBILE HEADER SPACING FIX */
+@media (max-width: 768px) {
+  main {
+    padding-top: 70px !important;
+  }
+
+  .section {
+    scroll-margin-top: 70px !important;
+  }
+}
