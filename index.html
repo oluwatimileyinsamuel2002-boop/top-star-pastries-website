@@ -322,17 +322,19 @@ card.appendChild(price);
       product.description || "Freshly baked at Top Star Pastries.";
     card.appendChild(description);
 card.style.cursor = "pointer";
-const orderButton = document.createElement("a");
-orderButton.className = "btn btn-whatsapp";
-orderButton.textContent = "Order on WhatsApp";
+const cartButton = document.createElement("button");
+cartButton.className = "btn btn-cart";
+cartButton.textContent = "Add to Cart";
 
-const message = `Hello Top Star Pastries 👋 I would like to order ${product.name} — ₦${Number(product.selling_price || 0).toLocaleString("en-NG")}.`;
+cartButton.addEventListener("click", () => {
+  addToCart({
+    id: product.id,
+    name: product.name,
+    price: Number(product.selling_price || 0)
+  });
+});
 
-orderButton.href = `https://wa.me/2349071257721?text=${encodeURIComponent(message)}`;
-orderButton.target = "_blank";
-orderButton.rel = "noopener noreferrer";
-
-card.appendChild(orderButton);
+card.appendChild(cartButton);
   
     container.appendChild(card);
   });
