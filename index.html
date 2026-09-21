@@ -545,7 +545,50 @@ function showCheckoutForm() {
 
   document.body.appendChild(formBox);
 }
+function submitCheckout() {
+  const name = document.getElementById("customer-name").value.trim();
+  const phone = document.getElementById("customer-phone").value.trim();
+  const location = document.getElementById("customer-location").value.trim();
+  const note = document.getElementById("customer-note").value.trim();
 
+  if (!name || !phone || !location) {
+    alert("Please enter your name, phone number and location.");
+    return;
+  }
+
+  let message = "Hello Top Star Pastries 👋\n\n";
+  message += "I would like to place this order:\n\n";
+
+  message += `Customer Name: ${name}\n`;
+  message += `Phone: ${phone}\n`;
+  message += `Location: ${location}\n`;
+
+  if (note) {
+    message += `Note: ${note}\n`;
+  }
+
+  message += "\nOrder:\n";
+
+  let total = 0;
+
+  cart.forEach(item => {
+    const subtotal = item.price * item.quantity;
+    total += subtotal;
+
+    message += `${item.name} × ${item.quantity} — ₦${subtotal.toLocaleString("en-NG")}\n`;
+  });
+
+  message += `\nTotal: ₦${total.toLocaleString("en-NG")}`;
+  message += "\n\nPlease confirm my order. Thank you!";
+
+  window.open(
+    "https://wa.me/2349071257721?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+
+  document.getElementById("checkout-box").remove();
+}
 function orderCartOnWhatsApp() {
   if (cart.length === 0) return;
 
