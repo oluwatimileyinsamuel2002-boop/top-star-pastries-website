@@ -386,3 +386,43 @@ footer,
     max-width: 100% !important;
   }
 }
+/* FINAL MOBILE LAYOUT FIX */
+@media (max-width: 768px) {
+  .order-section,
+  .contact,
+  .contact > div,
+  .contact-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .order-section {
+    padding: 40px 24px !important;
+  }
+
+  .contact {
+    padding: 40px 24px !important;
+  }
+
+  .contact > div:first-child {
+    padding: 0 !important;
+    margin: 0 0 30px 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+
+  .contact-card {
+    display: grid !important;
+    gap: 12px !important;
+  }
+
+  .contact-card > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
