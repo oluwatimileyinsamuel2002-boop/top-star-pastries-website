@@ -308,7 +308,29 @@ card.appendChild(price);
     description.textContent =
       product.description || "Freshly baked at Top Star Pastries.";
     card.appendChild(description);
+card.style.cursor = "pointer";
 
+card.addEventListener("click", function () {
+  const productPrice = Number(product.selling_price || 0).toLocaleString(
+    "en-NG",
+    {
+      style: "currency",
+      currency: "NGN",
+      maximumFractionDigits: 0
+    }
+  );
+
+  const message = encodeURIComponent(
+    "Hello Top Star Pastries 👋 I would like to order " +
+    product.name +
+    " - " +
+    productPrice +
+    "."
+  );
+
+  window.location.href =
+    "https://wa.me/2349071257721?text=" + message;
+});
   
     container.appendChild(card);
   });
