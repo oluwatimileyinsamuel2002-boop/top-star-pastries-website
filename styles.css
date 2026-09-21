@@ -486,3 +486,23 @@ footer,
     border-radius: 0 !important;
   }
 }
+/* FINAL SECTION SEPARATION */
+@media (max-width: 768px) {
+  .order-section {
+    margin-bottom: 60px !important;
+    border-radius: 0 0 30px 30px !important;
+  }
+
+  .contact {
+    background: #fffaf5 !important;
+    margin-top: 0 !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    border-radius: 0 !important;
+  }
+
+  .contact > div:first-child {
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+}
