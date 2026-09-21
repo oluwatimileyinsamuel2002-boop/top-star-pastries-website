@@ -359,6 +359,165 @@ if (menuToggle && nav) {
     });
   });
       }
+    let cart = [];
+
+function addToCart(product) {
+  const existing = cart.find(item => item.id === product.id);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: 1
+    });
+  }
+
+  updateCartButton();
+  showCart();
+}
+
+function updateCartButton() {
+  let cartButton = document.getElementById("cart-button");
+
+  if (!cartButton) {
+    cartButton = document.createElement("button");
+    cartButton.id = "cart-button";
+    cartButton.onclick = showCart;
+
+    cartButton.style.position = "fixed";
+    cartButton.style.bottom = "20px";
+    cartButton.style.right = "20px";
+    cartButton.style.zIndex = "9999";
+    cartButton.style.padding = "14px 20px";
+    cartButton.style.borderRadius = "30px";
+    cartButton.style.border = "none";
+    cartButton.style.background = "#25D366";
+    cartButton.style.color = "white";
+    cartButton.style.fontSize = "16px";
+    cartButton.style.fontWeight = "bold";
+
+    document.body.appendChild(cartButton);
+  }
+
+  const count = cart.reduce((total, item) => total + item.quantity, 0);
+  cartButton.textContent = `🛒 Cart (${count})`;
+}
+
+function showCart() {
+  let cartBox = document.getElementById("cart-box");
+
+  if (cartBox) {
+    cartBox.remove();
+    return;
+  }
+
+  cartBox = document.createElement("div");
+  cartBox.id = "cart-box";
+
+  cartBox.style.position = "fixed";
+  cartBox.style.top = "10%";
+  cartBox.style.left = "5%";
+  cartBox.style.width = "90%";
+  cartBox.style.maxHeight = "75vh";
+  cartBox.style.overflowY = "auto";
+  cartBox.style.background = "white";
+  cartBox.style.padding = "20px";
+  cartBox.style.borderRadius = "20px";
+  cartBox.style.boxShadow = "0 5px 30px rgba(0,0,0,0.3)";
+  cartBox.style.zIndex = "10000";
+  cartBox.style.boxSizing = "border-box";
+
+  let html = "<h2>🛒 Your Cart</h2>";
+
+  if (cart.length === 0) {
+    html += "<p>Your cart is empty.</p>";
+  } else {
+    cart.forEach((item, index) => {
+      html += `
+        <div style="padding:12px 0;border-bottom:1px solid #ddd;">
+          <strong>${item.name}</strong><br>
+          ₦${item.price.toLocaleString("en-NG")} × ${item.quantity}
+          <br>
+          <button onclick="changeQuantity(${index}, -1)">−</button>
+          <button onclick="changeQuantity(${index}, 1)">+</button>
+          <button onclick="removeFromCart(${index})">Remove</button>
+        </div>
+      `;
+    });
+
+    const total = cart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    html += `
+      <h3>Total: ₦${total.toLocaleString("en-NG")}</h3>
+      <button onclick="orderCartOnWhatsApp()"
+        style="width:100%;padding:14px;background:#25D366;color:white;border:0;border-radius:25px;font-weight:bold;">
+        Order on WhatsApp
+      </button>
+    `;
+  }
+
+  html += `
+    <button onclick="document.getElementById('cart-box').remove()"
+      style="width:100%;padding:12px;margin-top:10px;border:0;border-radius:25px;">
+      Close
+    </button>
+  `;
+
+  cartBox.innerHTML = html;
+  document.body.appendChild(cartBox);
+}
+
+function changeQuantity(index, amount) {
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  updateCartButton();
+  showCart();
+  showCart();
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartButton();
+  showCart();
+  showCart();
+}
+
+function orderCartOnWhatsApp() {
+  if (cart.length === 0) return;
+
+  let message = "Hello Top Star Pastries 👋\n\n";
+  message += "I'd like to place this order:\n\n";
+
+  let total = 0;
+
+  cart.forEach(item => {
+    const subtotal = item.price * item.quantity;
+    total += subtotal;
+
+    message += `${item.name} × ${item.quantity} — ₦${subtotal.toLocaleString("en-NG")}\n`;
+  });
+
+  message += `\nTotal: ₦${total.toLocaleString("en-NG")}`;
+  message += "\n\nPlease confirm my order. Thank you!";
+
+  window.open(
+    "https://wa.me/2349071257721?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+}
+
+updateCartButton();
       </script>
 </body>
 </html>
