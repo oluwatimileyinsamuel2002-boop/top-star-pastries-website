@@ -506,3 +506,33 @@ footer,
     border-radius: 0 !important;
   }
 }
+/* FORCE ORDER AND CONTACT TO STAY SEPARATE */
+@media (max-width: 768px) {
+
+  .order-section {
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding-bottom: 50px !important;
+    transform: none !important;
+    float: none !important;
+    overflow: visible !important;
+  }
+
+  .contact {
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    transform: none !important;
+    float: none !important;
+    clear: both !important;
+  }
+}
