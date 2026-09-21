@@ -455,3 +455,34 @@ footer,
     margin: 0 !important;
   }
 }
+/* FINAL ORDER AND CONTACT SEPARATION */
+@media (max-width: 768px) {
+  .order-section {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 50px !important;
+    overflow: visible !important;
+  }
+
+  .contact {
+    clear: both !important;
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 50px 24px !important;
+    background: #fffaf5 !important;
+    border-radius: 0 !important;
+    z-index: 2 !important;
+  }
+
+  .contact > div:first-child {
+    width: 100% !important;
+    margin: 0 0 30px 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+}
