@@ -184,3 +184,28 @@ footer,
     object-fit: cover !important;
   }
 }
+.product-card h3 {
+  font-size: 24px !important;
+  margin: 15px 0 8px !important;
+  font-weight: 700 !important;
+}
+
+.product-card strong {
+  display: inline-block !important;
+  font-size: 22px !important;
+  color: #8b3e16 !important;
+  margin-bottom: 10px !important;
+  font-weight: 800 !important;
+}
+
+.product-card p {
+  font-size: 16px !important;
+  margin: 0 0 20px !important;
+  color: #777 !important;
+}
+
+.product-card {
+  padding: 15px !important;
+  border-radius: 20px !important;
+  background: #fff !important;
+  }
