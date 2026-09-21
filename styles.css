@@ -565,3 +565,28 @@ footer,
     background: #fffaf5 !important;
   }
 }
+@media (max-width: 768px) {
+  .order-section {
+    background: transparent !important;
+    padding-bottom: 50px !important;
+  }
+
+  .order-section > div:first-child {
+    background: #7b3214 !important;
+    padding: 35px 24px 20px !important;
+    border-radius: 0 !important;
+  }
+
+  .order-section > a {
+    display: block !important;
+    background: #7b3214 !important;
+    padding: 15px 24px 35px !important;
+    margin: 0 !important;
+  }
+
+  .contact {
+    background: #fffaf5 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
