@@ -442,9 +442,9 @@ cartBox.style.border = "2px solid #f0d5c5";
           <strong>${item.name}</strong><br>
           ₦${item.price.toLocaleString("en-NG")} × ${item.quantity}
           <br>
-          <button onclick="changeQuantity(${index}, -1)">−</button>
-          <button onclick="changeQuantity(${index}, 1)">+</button>
-          <button onclick="removeFromCart(${index})">Remove</button>
+          <button onclick="changeQuantity(${index}, -1)" style="padding:8px 14px;border:0;border-radius:10px;background:#f0d5c5;font-weight:bold;">−</button>
+<button onclick="changeQuantity(${index}, 1)" style="padding:8px 14px;border:0;border-radius:10px;background:#f0d5c5;font-weight:bold;">+</button>
+<button onclick="removeFromCart(${index})" style="padding:8px 14px;border:0;border-radius:10px;background:#eee;font-weight:bold;">Remove</button>
         </div>
       `;
     });
