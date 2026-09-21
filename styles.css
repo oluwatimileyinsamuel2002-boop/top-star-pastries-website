@@ -684,3 +684,38 @@ footer,
     box-sizing: border-box !important;
   }
 }
+/* FINAL MOBILE PRODUCT CARD SIZE */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 16px !important;
+    margin-bottom: 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .product-image {
+    height: 220px !important;
+    border-radius: 16px !important;
+    object-fit: cover !important;
+  }
+
+  .product-card h3 {
+    font-size: 22px !important;
+    margin: 12px 0 8px !important;
+  }
+
+  .product-card strong {
+    font-size: 18px !important;
+    padding: 10px 18px !important;
+  }
+
+  .product-card p {
+    font-size: 15px !important;
+    margin: 10px 0 !important;
+  }
+
+  .btn-whatsapp {
+    margin-top: 12px !important;
+    padding: 12px 16px !important;
+    font-size: 15px !important;
+  }
+}
