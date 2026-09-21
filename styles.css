@@ -276,3 +276,57 @@ footer,
     padding-bottom: 20px !important;
   }
 }
+/* FINAL MOBILE WIDTH AND CONTACT FIX */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  main,
+  #home,
+  .section,
+  .order-section,
+  .contact,
+  .site-header,
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .order-section {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn-white {
+    color: #6b2b12 !important;
+    background: #ffffff !important;
+  }
+
+  .contact h2,
+  .contact p,
+  .contact strong,
+  .contact span {
+    color: #3b2118 !important;
+  }
+}
