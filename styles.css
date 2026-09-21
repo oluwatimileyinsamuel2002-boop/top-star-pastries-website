@@ -549,3 +549,19 @@ footer,
     margin-top: 0 !important;
   }
 }
+@media (max-width: 768px) {
+  .order-section {
+    height: fit-content !important;
+    min-height: fit-content !important;
+    max-height: fit-content !important;
+    margin-bottom: 60px !important;
+    overflow: visible !important;
+  }
+
+  .contact {
+    position: relative !important;
+    clear: both !important;
+    margin-top: 0 !important;
+    background: #fffaf5 !important;
+  }
+}
