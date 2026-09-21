@@ -536,3 +536,8 @@ footer,
     clear: both !important;
   }
 }
+@media (max-width: 768px) {
+  .order-section {
+    background: transparent !important;
+  }
+}
