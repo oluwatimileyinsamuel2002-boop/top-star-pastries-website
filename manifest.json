@@ -1,0 +1,16 @@
+{
+  "name": "Top Star Pastries",
+  "short_name": "Top Star",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#5a2410",
+  "description": "Freshly baked bread and pastries from Top Star Pastries.",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
