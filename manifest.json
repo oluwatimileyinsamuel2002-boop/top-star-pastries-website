@@ -8,7 +8,7 @@
   "description": "Freshly baked bread and pastries from Top Star Pastries.",
   "icons": [
     {
-      "src": "/assets/logo.png",
+      "src": "/assets/top-star-logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
